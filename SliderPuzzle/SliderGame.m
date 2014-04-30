@@ -166,7 +166,6 @@
         lastY = y;
     }
     self.active = isActive;
-    [self printBoardDebug];
 }
 
 - (void)moveTile:(NSUInteger)x :(NSUInteger)y : (UIButton *)pressed {
@@ -216,29 +215,5 @@
 
 - (bool)isAWin {
     return self.active && [gameArray isEqualToArray:winningArray];
-}
-
-- (void) printBoardDebug
-{
-    NSLog(@"%d %d %d %d",
-          [[self getPosition:0 :0] intValue],
-          [[self getPosition:0 :1] intValue],
-          [[self getPosition:0 :2] intValue],
-          [[self getPosition:0 :3] intValue]);
-    NSLog(@"%d %d %d %d",
-          [[self getPosition:1 :0] intValue],
-          [[self getPosition:1 :1] intValue],
-          [[self getPosition:1 :2] intValue],
-          [[self getPosition:1 :3] intValue]);
-    NSLog(@"%d %d %d %d",
-          [[self getPosition:2 :0] intValue],
-          [[self getPosition:2 :1] intValue],
-          [[self getPosition:2 :2] intValue],
-          [[self getPosition:2 :3] intValue]);
-    NSLog(@"%d %d %d %d",
-          [[self getPosition:3 :0] intValue],
-          [[self getPosition:3 :1] intValue],
-          [[self getPosition:3 :2] intValue],
-          [[self getPosition:3 :3] intValue]);
 }
 @end
